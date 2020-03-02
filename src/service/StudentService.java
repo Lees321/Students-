@@ -24,5 +24,13 @@ public class StudentService {
 			return 0;
 		}
 	}
+	public int Addstu(StudentEntity list) {
+		int lista = dao.Addstu(list);
+		if (lista != 0) {
+			return lista;
+		} else {
+			return 0;
+		}
+	}
 
 }

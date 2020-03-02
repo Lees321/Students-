@@ -54,4 +54,22 @@ public class Studentdao extends StudentUtils {
 		}
 		return list;
 	}
+
+	public int Addstu(StudentEntity list) {
+		int lists = 0;
+		try {
+			conn = createConnection();
+			String sql="INSERT INTO studentsinfo (userName,age,address) VALUES (?,?,?)";
+			pst = conn.prepareStatement(sql);
+			/* pst.setString(1, list.getUserName()); */
+			Object[] params = {list.getUserName(),list.getAge(),list.getAddress()};
+			lists = updateAll(sql, params);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			// TODO: handle finally clause
+		}
+		return lists;
+	}
 }

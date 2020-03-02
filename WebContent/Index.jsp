@@ -30,14 +30,14 @@
 						<td>${stu.age }</td>
 						<td>${stu.address }</td>
 						<td>
-							<a href="#">修改</a><%-- FindId?stuId=${stu.id } --%>
+							<a href="FindId?stuId=${stu.id }">修改</a><%-- FindId?stuId=${stu.id } --%>
 							<a href="DeleteId?stuId=${stu.id }">删除</a>
 						</td>
 					</tr>
 				</c:forEach>
 			</table>
 			<br/>
-			<p><a href="#">增加学生信息</a></p>
+			<p><a href="addStu.jsp">增加学生信息</a></p>
 			<%-- <p>
 				<center>
 					<a href="ServerView?pageIndex=1">首页</a>

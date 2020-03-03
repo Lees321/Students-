@@ -23,7 +23,7 @@ public class AddServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
 		String userName = req.getParameter("userName");
-		int age = Integer.parseInt(req.getParameter("age"));
+		int age = 22;/*Integer.parseInt(req.getParameter("age"));*/
 		String address = req.getParameter("address");
 		StudentService sts = new StudentService();
 		StudentEntity list  = new StudentEntity(userName, age, address);
